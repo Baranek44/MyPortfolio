@@ -706,8 +706,8 @@ html {
 .project-img {
     width: 100%;
     border-radius: .5rem;
-    padding: 7rem 20rem;
-    opacity: .9;
+    padding: 7rem 15rem;
+    opacity: .8;
     display: block;
     transform-origin: top center;
     animation: imgAnim 1s 1s both;
@@ -827,6 +827,15 @@ html {
     visibility: visible;
     opacity: 1;
     transition: height .5s, opcity .5s .5s;
+}
+
+.service-img {
+    margin: auto 5px;
+    float: right;
+    opacity: 1;
+    width: 150px;
+    height: 100px;
+    transition: all .2s;
 }
 
 

@@ -16,14 +16,12 @@ const mousceCircleFunction = (x, y) => {
 const circles = document.querySelectorAll('.circle');
 const mainImage = document.querySelector(".main-circle img");
 
-let mX = 0;
-let mY = 0;
-const tt = 100;
-
-
 /*
     Try to imitate a pulsating circle around the cursor and in the center 
 */
+let mX = 0;
+let mY = 0;
+const tt = 80;
 const animateCircle = (e, x, y) => {
     if (x < mX) {
         circles.forEach((circle) => {
@@ -36,8 +34,6 @@ const animateCircle = (e, x, y) => {
         });
         mainImage.style.left = `-${tt}px`;
     }
-
-
     if (y < mY) {
         circles.forEach((circle) => {
             circle.style.top = `${tt}px`;
@@ -49,8 +45,6 @@ const animateCircle = (e, x, y) => {
         });
         mainImage.style.top = `-${tt}px`;
     }
-
-
     mX = e.clientX;
     mY = e.clientY;
 };
@@ -343,6 +337,7 @@ projectsBtn.addEventListener("click", (e) => {
     showHidenBoolen ? (projectsBtnText.textContent = "Show Less") :
         (projectsBtnText.textContent = "Show Less");
 
+
     projects.forEach((project, i) => {
         i >= 3 && (showHidenBoolen ? showProjects(project, i) :
             hideProjects(project, i));
@@ -360,13 +355,11 @@ document.querySelectorAll(".service-btn").forEach((service) => {
         serviceText.classList.toggle("change");
 
         const rightPosition = serviceText.classList.contains("change") ?
-            `calc(100% - ${getComputedStyle(service.firstElementChild).width})` :
-            0;
+            `calc(100% - ${getComputedStyle(service.firstElementChild).width})` : 0;
 
         service.firstElementChild.style.right = rightPosition;
     });
 });
-
 
 // Section 5
 // Form
